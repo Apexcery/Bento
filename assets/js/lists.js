@@ -4,8 +4,11 @@
 // Functions for printing both lists
 
 const generateFirstListsContainer = () => {
+  let item = `
+        <div class="card list list__${list.id}" id="list_${list.id}">
+        <i class="listIcon" icon-name="${list.icon}"></i>`;
 	for (const list of CONFIG.firstlistsContainer) {
-		let item = `
+		item += `
         <div class="card list list__${list.id}" id="list_${list.id}">
           <i class="listIcon" icon-name="${list.icon}"></i>
           <a
@@ -33,18 +36,19 @@ const generateFirstListsContainer = () => {
           href="${list.links[4].link}"
           class="listItem"
           >${list.links[4].name}</a>
-        </div>
       `;
-		const position = 'beforeend';
-		lists_1.insertAdjacentHTML(position, item);
 	}
+  item += `</div>`;
+  const position = 'beforeend';
+  lists_2.insertAdjacentHTML(position, item);
 };
 
 const generateSecondListsContainer = () => {
-	for (const list of CONFIG.secondListsContainer) {
-		let item = `
+  let item = `
         <div class="card list list__${list.id}" id="list_${list.id}">
-        <i class="listIcon" icon-name="${list.icon}"></i>
+        <i class="listIcon" icon-name="${list.icon}"></i>`;
+	for (const list of CONFIG.secondListsContainer) {
+		item += `
         <a
         target="${CONFIG.openInNewTab ? '_blank' : ''}"
         href="${list.links[0].link}"
@@ -65,11 +69,11 @@ const generateSecondListsContainer = () => {
         href="${list.links[3].link}"
         class="listItem"
         >${list.links[3].name}</a>
-        </div>
       `;
-		const position = 'beforeend';
-		lists_2.insertAdjacentHTML(position, item);
 	}
+  item += `</div>`;
+  const position = 'beforeend';
+  lists_2.insertAdjacentHTML(position, item);
 };
 
 const generateLists = () => {
