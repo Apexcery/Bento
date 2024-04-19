@@ -65,27 +65,27 @@ const CONFIG = {
 		},
 		{
 			id: '3',
-			name: 'Instagram',
-			icon: 'instagram',
-			link: 'https://instagram.com',
-		},
-		{
-			id: '4',
 			name: 'Plex',
 			icon: 'film',
 			link: 'https://app.plex.tv',
 		},
 		{
-			id: '5',
-			name: 'Twitch',
-			icon: 'twitch',
-			link: 'https://twitch.tv/directory/following/live',
-		},
-		{
-			id: '6',
+			id: '4',
 			name: 'YouTube',
 			icon: 'youtube',
 			link: 'https://www.youtube.com/feed/subscriptions',
+		},
+		{
+			id: '5',
+			name: 'Instagram',
+			icon: 'instagram',
+			link: 'https://instagram.com',
+		},
+		{
+			id: '6',
+			name: 'Twitch',
+			icon: 'twitch',
+			link: 'https://twitch.tv/directory/following/live',
 		}
 	],
 
